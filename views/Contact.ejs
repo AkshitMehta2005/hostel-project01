@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./Contact.css">
+     
+    <link rel="shortcut icon" href="favicon.png" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .container-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            width: 80%;
+            height: auto;
+            margin: auto;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            border: 1px solid white;
+            border-radius: 0px;
+
+        }
+
+        .icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 17px;
+        }
+
+        @media (max-width: 768px) {
+            .container-row {
+                flex-direction: column;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .contact-row {
+                flex-direction: column;
+                width: 90%;
+            }
+        }
+
+        .contactheading {
+            font-size: 20px;
+            text-align: center;
+            padding: 20px;
+
+        }
+
+        .contact-heading {
+            font-size: 30px;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .contact-heading {
+                font-size: 25px;
+            }
+
+            .contactheading {
+                font-size: 22px;
+                text-align: center;
+                padding: 20px;
+                margin-left: -10px;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+
+    
+  <header class="header" id="header">
+    <section class="wrapper nav">
+      <a href="./Home.ejs" class="brand"><img src="https://upload.wikimedia.org/wikipedia/en/c/cf/Iiit-una-logo.png"
+          alt="" style="height: 50px">
+        <p>भारतीय सूचना प्रौद्योगिकी संस्थान ऊना</p>
+      </a>
+      <div class="burger" id="burger">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </div>
+      <span class="overlay"></span>
+      <nav class="navbar" id="navbar">
+        <ul class="menu" id="menu">
+          <li class="menu-item"><a href="/home">Home</a></li>
+          <li class="menu-item menu-dropdown">
+            <span class="menu-link" data-toggle="submenu"><a href="#director">Warden Desk</a><i
+                class="bx bx-chevron-down"></i></span>
+          </li>
+          <li class="menu-item menu-dropdown">
+            <span class="menu-link" data-toggle="submenu"><a href="/hostel">Hostels</a><i
+                class="bx bx-chevron-down"></i></span>
+          </li>
+          <li class="menu-item menu-dropdown">
+            <span class="menu-link" data-toggle="submenu"><a href="/Contact">Contact</a><i
+                class="bx bx-chevron-down"></i></span>
+          </li>
+          <li class="menu-item menu-dropdown">
+            <span class="menu-link" data-toggle="submenu"><a href="/">Login</a><i
+                class="bx bx-chevron-down"></i></span>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+    <section>
+        <div class="paralex-body">
+            <div class="paralex-head paralex-images">
+                <div class="paralex-text">
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="contactheading">
+        <h1 class="contact-heading">Contact Us</h1>
+    </div>
+    </div>
+    <div class="container-row">
+        <div class="container">
+            <div class="icon"><i class="fas fa-phone"></i></div>
+            <p>Mobile: (+91) 98370-12205 <br>Mobile: (+91) 95556-98585</p>
+
+        </div>
+
+        <div class="container">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <p>ankur@iiitu.ac.in <br>naveen@iiitu.ac.in</p>
+        </div>
+
+        <div class="container">
+            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+            <p>Indian Institute of Information Technology<br> Una
+
+                Saloh (HP) - 177209
+            </p>
+        </div>
+    </div>
+    <!-- footer section starts -->
+
+  
+    <section id="footer">
+        <div class="footer">
+          <div class="footer-content">
+            <div class="footer-section about">
+              <h1 class="logo-text"><span>IIITU</span>Hostel</h1>
+              <p>IIIT Una is Institute of National Importance
+              </p>
+              <div class="contact">
+                <span><i class="fas fa-phone"></i> &nbsp; 123-456-789</span>
+                <span><i class="fas fa-envelope"></i> &nbsp; info@iiituhostel.ac.in</span>
+              </div>
+    
+              <div class="socials">
+                <a href="https://www.facebook.com/iiituna?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/iiituna_?igshid=NDk5N2NlZjQ="><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/cdciiituna/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://youtu.be/TukeiuMwELE"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+            <div class="footer-section links">
+              <h2>Quick Links</h2>
+              <br>
+              <ul>
+                <a   href="#title">
+                  <li>Home</li>
+                </a>
+                <a  href="#blog">
+                  <li>News & Notices</li>
+                </a>
+                <a  href="#pricing">
+                  <li>Facility</li>
+                </a>
+                <a  href="gallery.html">
+                  <li>Gallery</li>
+                </a>
+                <a  href="hostelinfo.html">
+                  <li>Hostels</li>
+                </a>
+                
+              </ul>
+              
+            </div>
+            <div class="footer-section">
+              <h2>Our Location</h2>
+              <!-- Near Soloh,Una Distict himachal pradesh -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2586.68265356037!2d76.18574115594332!3d31.48140220770574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1668840065065!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            &copy; IIITUHostel.ac.in | designed by Akshit Mehta (22307)
+          </div>
+        </div>
+    
+      </section>
+
+</body>
+
+</html>

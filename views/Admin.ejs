@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Approval Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="adminheading">Admin Panel</h1>
+    <!-- Leave Requests Table -->
+    <div class="leave-requests-container">
+        <h2>Leave Requests</h2>
+        <table class="requests-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Roll</th>
+                    <th>Room</th>
+                    <th>Hostel</th>
+                    <th>Departure</th>
+                    <th>Arrival</th>
+                    <th>Days</th>
+                    <th>Address</th>
+                    <th>Purpose</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% Leaves.forEach(leave => { %>
+                    <tr>
+                        <td><%= leave.name %></td>
+                        <td><%= leave.roll %></td>
+                        <td><%= leave.room %></td>
+                        <td><%= leave.hostel %></td>
+                        <td><%= leave.departure %></td>
+                        <td><%= leave.arrival %></td>
+                        <td><%= leave.days %></td>
+                        <td><%= leave.address %></td>
+                        <td><%= leave.Purpose %></td>
+
+                        
+                        <td><%= leave.status %></td>
+                        <td>
+                            <!-- Form for Approving leave -->
+                            <form method="POST" action="/approveLeave">
+                                <input type="hidden" name="leaveId" value="<%= leave._id %>">
+                                <button type="submit" class="accept-button">Approve</button>
+                            </form>
+                        </td>
+                        <td>
+                            <!-- Form for Rejecting leave -->
+                            <form method="POST" action="/leavereject">
+                                <input type="hidden" name="leaveId" value="<%= leave._id %>">
+                                <button type="submit" class="reject-button">Reject</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Mess Complaints Table -->
+    <div class="mess-complaints-container">
+        <h2>Mess Complaints</h2>
+        <table class="complaints-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Roll</th>
+                    <th>Room</th>
+                    <th>Mess</th>
+                    <th>Complaint</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% messComplaints.forEach(messComplaint => { %>
+                    <tr>
+                        <td><%= messComplaint.name %></td>
+                        <td><%= messComplaint.roll %></td>
+                        <td><%= messComplaint.room %></td>
+                        <td><%= messComplaint.mess %></td>
+                        <td><%= messComplaint.complaint %></td>
+                        <td><%= messComplaint.status %></td>
+                        <td>
+                            <!-- Form for Approving mess complaint -->
+                            <form method="POST" action="/approveMessComplaint">
+                                <input type="hidden" name="messComplaintId" value="<%= messComplaint._id %>">
+                                <button type="submit" class="accept-button">Approve</button>
+                            </form>
+                        </td>
+                        <td>
+                            <!-- Form for Rejecting mess complaint -->
+                            <form method="POST" action="/rejectMessComplaint">
+                                <input type="hidden" name="messComplaintId" value="<%= messComplaint._id %>">
+                                <button type="submit" class="reject-button">Reject</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Civil Complaints Table -->
+    <div class="civil-complaints-container">
+        <h2>Civil Complaints</h2>
+        <table class="complaints-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Roll</th>
+                    <th>Room</th>
+                    <th>Hostel</th>
+                    <th>Complaint</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% civilComplaints.forEach(civilComplaint => { %>
+                    <tr>
+                        <td><%= civilComplaint.name %></td>
+                        <td><%= civilComplaint.roll %></td>
+                        <td><%= civilComplaint.room %></td>
+                        <td><%= civilComplaint.hostel %></td>
+                        <td><%= civilComplaint.complain %></td>
+                        <td><%= civilComplaint.status %></td>
+                        <td>
+                            <!-- Form for Approving civil complaint -->
+                            <form method="POST" action="/approveCivilComplaint">
+                                <input type="hidden" name="civilComplaintId" value="<%= civilComplaint._id %>">
+                                <button type="submit" class="accept-button">Approve</button>
+                            </form>
+                        </td>
+                        <td>
+                            <!-- Form for Rejecting civil complaint -->
+                            <form method="POST" action="/rejectCivilComplaint">
+                                <input type="hidden" name="civilComplaintId" value="<%= civilComplaint._id %>">
+                                <button type="submit" class="reject-button">Reject</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
